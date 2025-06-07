@@ -23,6 +23,10 @@ export class HomeComponent {
     this.registerMode = !this.registerMode;
   }
 
+  cancelRegisterMode(event: boolean){
+    this.registerMode = event;
+  }
+
   getUsers() {
     this.http.get('https://localhost:7005/api/users').subscribe({
       next: (response) => (this.users = response),

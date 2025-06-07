@@ -4,14 +4,19 @@
     <h1>Meet new friends</h1>
     <p class="lead">Sign up right now!</p>
     <div class="text-center">
-      <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">Register</button>
+      <button (click)="registerToggle()" class="btn btn-primary btn-lg me-2">
+        Register
+      </button>
       <button class="btn btn-info btn-lg me-2">Learn more</button>
     </div>
     } @else {
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-4">
-          <app-register [usersFromHomeComponent]="users"></app-register>
+          <app-register 
+          
+          (cancelRegister)="cancelRegisterMode($event)"
+          ></app-register>
         </div>
       </div>
     </div>
